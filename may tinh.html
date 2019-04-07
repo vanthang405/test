@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mays tinh bo tui</title>
+</head>
+<body>
+
+<input id="number" type="text">
+<br>
+<input type="button" value="1" onclick="setInput(this.value)">
+<input type="button" value="2" onclick="setInput(this.value)">
+<input type="button" value="3" onclick="setInput(this.value)">
+<input type="button" value="+" onclick="setInput(this.value)">
+<br>
+<input type="button" value="4" onclick="setInput(this.value)">
+<input type="button" value="5" onclick="setInput(this.value)">
+<input type="button" value="6" onclick="setInput(this.value)">
+<input type="button" value="-" onclick="setInput(this.value)">
+<br>
+<input type="button" value="7" onclick="setInput(this.value)">
+<input type="button" value="8" onclick="setInput(this.value)">
+<input type="button" value="9" onclick="setInput(this.value)">
+<input type="button" value="*" onclick="setInput(this.value)">
+<br>
+<input type="button" value="C" onclick="clearInput()"/>
+<input type="button" value="0" onclick="setInput(this.value)">
+<input type="button" value="=" onclick="output()">
+<input type="button" value="/" onclick="setInput(this.value)">
+
+<script>
+    function setInput(value) {
+        document.getElementById("number").value += value;
+    }
+
+    function output() {
+        let output=document.getElementById("number").value;
+        let result=eval(output);
+        document.getElementById("number").value = result;
+    }
+
+    function clearInput() {
+       document.getElementById("number").value = '';
+    }
+
+</script>
+</body>
+</html>
